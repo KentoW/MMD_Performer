@@ -1,0 +1,14 @@
+#chord_box{
+    margin: 0 0 10px;
+    background: white;
+    height:200px;
+    overflow:scroll;
+}
+
+.button{
+    background:black;
+    color:white;
+    width:100px;
+    border-radius:3px;
+    cursor:pointer;
+}

@@ -1,0 +1,41 @@
+{
+    "manifest_version": 2, 
+    "name": "MMD Performer (β)", 
+    "short_name": "MMDP (β)", 
+    "version": "0.14", 
+    "description": "YouTubeの音楽をBGMにして，あなたが演奏し，MMDモデルが踊って歌います．", 
+    "icons": {
+        "16" : "icon/icon_16.png", 
+        "48" : "icon/icon_48.png", 
+        "128" : "icon/icon_128.png"
+    }, 
+    "content_scripts": [
+        {
+            "matches": ["https://www.youtube.com/*"], 
+            "js": ["js/jquery-3.0.0.min.js", "js/tk-audials.min.js", "myscript.js", "js/mfccs.js", "js/songle.js", "js/control_panel.js"], 
+            "css": ["css/mystyles.css", "css/tk-audials.min.css", "css/songle.css", "css/control_panel.css"], 
+            "run_at": "document_end"
+        }
+    ],  
+    "background": {
+        "scripts": ["eventpage.js"], 
+        "persistent": false
+    }, 
+    "browser_action": {
+        "default_icon": "icon/icon_48.png",
+        "default_title": "MMD Performer",
+        "default_popup": "popup.html"
+    }, 
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'", 
+    "web_accessible_resources": ["audio/*.wav", "html/*.html", "html/soundfont/*", 
+        "html/soundfont/acoustic_grand_piano-mp3/*", 
+        "html/soundfont/acoustic_guitar_nylon-mp3/*", 
+        "html/soundfont/distortion_guitar-mp3/*", 
+        "html/soundfont/electric_bass_pick-mp3/*", 
+        "html/soundfont/guitar_harmonics-mp3/*", 
+        "html/soundfont/overdriven_guitar-mp3/*", 
+        "html/soundfont/shamisen-mp3/*", 
+        "html/soundfont/synth_bass_2-mp3/*", 
+        "js/*.js", "motion/*.vmd"], 
+    "permissions": ["tabs", "management"]
+}

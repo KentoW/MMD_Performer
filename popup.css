@@ -1,0 +1,36 @@
+html{
+    margin:0;
+}
+
+body{
+    background: -prefix-linear-gradient(top, rgb(120,120,120), rgb(73,73,75));
+    background: linear-gradient(to bottom, rgb(120,120,120), rgb(73,73,75));
+    color:white;
+    text-shadow: -1px -1px 1px #333333;
+    margin:0;
+    height:80px;
+}
+#app_label{
+    margin-left:10px;
+    margin-right:10px;
+    padding-top:10px;
+    padding-bottom:5px;
+    text-align:center;
+    font-size:12pt;
+    border-bottom:2px white solid;
+}
+
+#work_label{
+    position:absolute;
+    font-size:10pt;
+    top:40px;
+    width:100%;
+    text-align:center;
+    cursor:pointer;
+}
+#work_label:hover{
+    background: -prefix-linear-gradient(top, rgb(110,110,110), rgb(63,63,65));
+    background: linear-gradient(to bottom, rgb(110,110,110), rgb(63,63,65));
+}
+
+

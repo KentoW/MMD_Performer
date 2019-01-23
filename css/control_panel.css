@@ -1,0 +1,489 @@
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 5.35px 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 16.3px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #000000;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0.8px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #000000;
+  height: 27px;
+  width: 10px;
+  border-radius: 0px;
+  background: #e2e2e2;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5.35px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #000000;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 16.3px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #000000;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0.8px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #000000;
+  height: 27px;
+  width: 18px;
+  border-radius: 0px;
+  background: #e0ebd7;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 16.3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #000000;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #000000;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 0.8px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #000000;
+  height: 27px;
+  width: 18px;
+  border-radius: 0px;
+  background: #e0ebd7;
+  cursor: pointer;
+  height: 16.3px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #000000;
+}
+input[type=range]:focus::s-ms-fill-upper {
+  background: #000000;
+}
+
+
+
+#main_panel{
+    width:100%;
+    height:200px;
+ /*   background:rgb(32,32,34);
+    background: -prefix-linear-gradient(top, rgb(15,15,15), rgb(32,32,34));
+    background: linear-gradient(to bottom, rgb(15,15,15), rgb(32,32,34));*/
+    background:white;
+    -webkit-background-size: cover;
+    background-size: cover;
+    color:#fffeec;
+    margin-bottom:10px;
+    box-shadow:0 1px 2px rgba(0,0,0,.1);
+    position:relative;
+    overflow:hidden;
+    cursor:default;
+    text-shadow: -1px -1px 1px #333333;
+}
+#panel_bg{
+    position:absolute;
+    width:100%;
+    height:100%;
+    -webkit-filter: blur(50px);
+    filter: blur(50px);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+#panel_cover{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.2)
+}
+
+#main_panel_title{
+    position:absolute;
+    font-size:17px;
+    top:0px;
+    left:10px;
+    height:20px;
+    width:200px;
+}
+#close_button{
+    position:absolute;
+    font-size:17px;
+    top:0px;
+    left:calc(100% - 50px);
+    height:20px;
+    width:50px;
+    cursor:pointer;
+}
+#close_button:hover{
+    color:rgb(238,17,119);
+}
+
+/*MMD PIANO REPEAT関係*/
+#general_control{
+    position:absolute;
+    width:calc(30% - 10px);
+    height:165px;
+    left:10px;
+    top:20px;
+    background:rgba(0,0,0,0.5);
+    /*
+    background: -prefix-linear-gradient(top, rgb(120,120,120), rgb(73,73,75));
+    background: linear-gradient(to bottom, rgb(120,120,120), rgb(73,73,75));*/
+    font-size:15px;
+    text-align:center;
+    overflow:hidden;
+    padding-top:5px;
+}
+
+#mmd_control{
+    position:absolute;
+    width:100%;
+    height:20px;
+    top:30px;
+}
+#mmd_control_label{
+    padding-top:5px;
+    position:absolute;
+    font-size:10px;
+    background:rgb(72,72,72);
+    margin:-1px;
+    border:solid 1px rgb(10,10,10);
+    height:calc(100% - 5px);
+    width:60px;
+    left:calc(50% - 75px);
+}
+#mmd_control_light{
+    position:absolute;
+    background:rgb(0,162,100);
+    height:50%;
+    width:30px;
+    top:25%;
+    left:calc(50% - 5px);
+    box-shadow: inset 1px 1px 2px rgb(50,50,50);
+}
+#mmd_control_light.sel{
+    background:red;
+}
+#mmd_control_button{
+    position:absolute;
+    background:rgb(220,220,220);
+    background: -prefix-linear-gradient(top, rgb(220,220,220), rgb(200,200,200));
+    background: linear-gradient(to bottom, rgb(220,220,220), rgb(200,200,200));
+    height:90%;
+    top:5%;
+    width:40px;
+    left:calc(50% + 35px);
+    border-radius:2px;
+    cursor:pointer;
+    box-shadow:1px 1px 1px rgba(0,0,0,.1);
+    margin:-1px;
+    border:solid 1px rgb(80,80,80);
+}
+#mmd_control_button:hover{
+    background:rgb(200,200,200);
+    background: -prefix-linear-gradient(top, rgb(200,200,200), rgb(180,180,180));
+    background: linear-gradient(to bottom, rgb(180,180,180), rgb(180,180,180));
+}
+
+
+
+
+
+
+#piano_control{
+    position:absolute;
+    width:100%;
+    height:20px;
+    top:60px;
+}
+#piano_control_label{
+    padding-top:5px;
+    position:absolute;
+    font-size:10px;
+    background:rgb(72,72,72);
+    margin:-1px;
+    border:solid 1px rgb(10,10,10);
+    height:calc(100% - 5px);
+    width:60px;
+    left:calc(50% - 75px);
+}
+#piano_control_light{
+    position:absolute;
+    background:rgb(0,162,100);
+    height:50%;
+    width:30px;
+    top:25%;
+    left:calc(50% - 5px);
+    box-shadow: inset 1px 1px 2px rgb(50,50,50);
+}
+#piano_control_light.sel{
+    background:red;
+}
+#piano_control_button{
+    position:absolute;
+    background:rgb(220,220,220);
+    background: -prefix-linear-gradient(top, rgb(220,220,220), rgb(200,200,200));
+    background: linear-gradient(to bottom, rgb(220,220,220), rgb(200,200,200));
+    height:90%;
+    top:5%;
+    width:40px;
+    left:calc(50% + 35px);
+    border-radius:2px;
+    cursor:pointer;
+    box-shadow:1px 1px 1px rgba(0,0,0,.1);
+    margin:-1px;
+    border:solid 1px rgb(80,80,80);
+}
+#piano_control_button:hover{
+    background:rgb(200,200,200);
+    background: -prefix-linear-gradient(top, rgb(200,200,200), rgb(180,180,180));
+    background: linear-gradient(to bottom, rgb(180,180,180), rgb(180,180,180));
+}
+
+
+
+#repeat_control{
+    position:absolute;
+    width:100%;
+    height:20px;
+    top:90px;
+}
+#repeat_control_label{
+    padding-top:5px;
+    position:absolute;
+    font-size:10px;
+    background:rgb(72,72,72);
+    margin:-1px;
+    border:solid 1px rgb(10,10,10);
+    height:calc(100% - 5px);
+    width:60px;
+    left:calc(50% - 75px);
+}
+#repeat_control_light{
+    position:absolute;
+    background:rgb(0,162,100);
+    height:50%;
+    width:30px;
+    top:25%;
+    left:calc(50% - 5px);
+    box-shadow: inset 1px 1px 2px rgb(50,50,50);
+}
+#repeat_control_light.sel{
+    background:red;
+}
+#repeat_control_button{
+    position:absolute;
+    background:rgb(220,220,220);
+    background: -prefix-linear-gradient(top, rgb(220,220,220), rgb(200,200,200));
+    background: linear-gradient(to bottom, rgb(220,220,220), rgb(200,200,200));
+    height:90%;
+    top:5%;
+    width:40px;
+    left:calc(50% + 35px);
+    border-radius:2px;
+    cursor:pointer;
+    box-shadow:1px 1px 1px rgba(0,0,0,.1);
+    margin:-1px;
+    border:solid 1px rgb(80,80,80);
+}
+#repeat_control_button:hover{
+    background:rgb(200,200,200);
+    background: -prefix-linear-gradient(top, rgb(200,200,200), rgb(180,180,180));
+    background: linear-gradient(to bottom, rgb(180,180,180), rgb(180,180,180));
+}
+
+.audio_button{
+    width:50px;
+    height:30px;
+    background:rgb(73,73,75);
+}
+
+
+
+/*EQ 関係*/
+#eq_control{
+    position:absolute;
+    padding-top:5px;
+    width:calc(20% - 10px);
+    height:165px;
+    left:calc(30% + 10px);
+    top:20px;
+    font-size:15px;
+    text-align:center;
+    /*
+    background:rgb(73,73,75);
+    background: -prefix-linear-gradient(top, rgb(120,120,120), rgb(73,73,75));
+    background: linear-gradient(to bottom, rgb(120,120,120), rgb(73,73,75));
+    */
+    background:rgba(0,0,0,0.5);
+    overflow:hidden;
+}
+
+#eq_h{
+    width:100%;
+    height:40px;
+    position:absolute;
+    top:30px;
+}
+#eq_m{
+    width:100%;
+    height:40px;
+    position:absolute;
+    top:80px;
+}
+#eq_l{
+    width:100%;
+    height:40px;
+    position:absolute;
+    top:130px;
+}
+.eq_label{
+    padding-top:5px;
+    position:absolute;
+    width:35%;
+    height:20px;
+    top:7.5px;
+    font-size:10px;
+    left:10%;
+    background:rgb(72,72,72);
+    margin:-1px;
+    border:solid 1px rgb(10,10,10);
+}
+.eq_dial{
+    position:absolute;
+    width:30px;
+    height:30px;
+    top:5px;
+    left:calc(45% + 5px);
+    cursor:pointer;
+}
+
+
+
+
+/*REVERB 関係*/
+#reverb_control{
+    padding-top:5px;
+    position:absolute;
+    width:calc(30% - 10px);
+    height:165px;
+    left:calc(50% + 10px);
+    top:20px;
+    font-size:15px;
+    text-align:center;
+    /*
+    background:rgb(73,73,75);
+    background: -prefix-linear-gradient(top, rgb(120,120,120), rgb(73,73,75));
+    background: linear-gradient(to bottom, rgb(120,120,120), rgb(73,73,75));
+    */
+    background:rgba(0,0,0,0.5);
+}
+#wet_control{
+    font-size:10px;
+    position:absolute;
+    background:rgb(72,72,72);
+    height:calc(100% - 30px);
+    top:30px;
+    width:30%;
+    left:15%;
+    margin:-2px;
+    border:solid 1px rgb(10,10,10);
+}
+#wet_input{
+    top:134px;
+    width:120px;
+    transform: rotate(-90deg);
+    transform-origin: -8px;
+    position:absolute;
+}
+
+#dry_control{
+    font-size:10px;
+    position:absolute;
+    background:rgb(72,72,72);
+    height:calc(100% - 30px);
+    top:30px;
+    width:30%;
+    left:55%;
+    margin:-2px;
+    border:solid 1px rgb(10,10,10);
+}
+#dry_input{
+    top:134px;
+    width:120px;
+    transform: rotate(-90deg);
+    transform-origin: -8px;
+    position:absolute;
+}
+.indi_line{
+    position:absolute;
+    width:80%;
+    left:10%;
+    height:1px;
+    background:rgb(151,151,151);
+}
+
+
+
+
+
+/*MASTER関係*/
+#master_control{
+    position:absolute;
+    padding-top:5px;
+    width:calc(20% - 20px);
+    height:165px;
+    left:calc(80% + 10px);
+    top:20px;
+    /*
+    background:rgb(73,73,75);
+    background: -prefix-linear-gradient(top, rgb(120,120,120), rgb(73,73,75));
+    background: linear-gradient(to bottom, rgb(120,120,120), rgb(73,73,75));
+    */
+    background:rgba(0,0,0,0.5);
+    font-size:15px;
+    text-align:center;
+}
+
+#master_vol{
+    font-size:10px;
+    position:absolute;
+    background:rgb(72,72,72);
+    height:calc(100% - 30px);
+    top:30px;
+    width:50%;
+    left:25%;
+    margin:-2px;
+    border:solid 1px rgb(10,10,10);
+}
+#vol_input{
+    top:134px;
+    width:120px;
+    transform: rotate(-90deg);
+    transform-origin: -8px;
+    position:absolute;
+}
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>MMD 未接続です</title>
+        <link href="../css/mmd.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="mmd_bg"></div>
+        <div id="mmd_cover"></div>
+        <div id="caution">
+            <div id="caution_label">注意</div>
+            <p>本プログラムの営利目的の使用は禁じています．何らかのトラブルが発生した際の責任は負いかねますのでご了承ください．</p>
+        </div>
+        <div id="mmd_params">
+            <div id="mmd_label">MMD Performer (β)</div>
+            <div class="param_label">1. MMDモデル(.pmd .pmx)の入ったフォルダの選択</div>
+            <input id="mmd_load" type="file" webkitdirectory directory>
+            <div id="init_vmd_load_label" class="param_label">2. 初めに使うモーションファイルの選択 (必須)</div>
+            <input id="init_vmd_load" type="file">
+            <div id="random_vmd_load_label" class="param_label">3. ランダムに切り替えるモーションファイルの入ったフォルダの選択 (省略可)</div>
+            <input id="random_vmd_load" type="file" webkitdirectory directory>
+            <div id="phy_label" class="param_label">4. 物理エンジンのON/OFF</div>
+            <label class="phy_radio">
+                <input name="mmd_phy" type="radio" value="on" checked style="margin-left:20px;">ON
+                <input name="mmd_phy" type="radio" value="off">OFF
+            </label>
+            <div id="lip_label" class="param_label">5. 自動表情付け・リップシンクのON/OFF (上記の項目3を行った場合，自動的にONになります)</div>
+            <label class="lip_radio"><input name="mmd_lip" type="radio" value="on" style="margin-left:20px;">ON
+            <input name="mmd_lip" type="radio" value="off" checked>OFF</label>
+            <div id="start_button">読み込み</div>
+        </div>
+
+        <div id="mmd_setting" style="display: none;">
+            <div class="set_label">モーション</div>
+            <label id="motionName">モーション</label><br>
+            <div class="set_label">カメラ</div>
+            <label>Y位置 <input type="range" id="camera_y" value=4 min=-10 max=20 step=1></label><br>
+            <label>Z位置 <input type="range" id="camera_z" value=30 min=20 max=50 step=0.1></label>
+            <div class="set_label">視点</div>
+            <label>Y位置 <input type="range" id="look_at_y" value=-5 min=-20 max=20 step=0.1></label>
+            <div class="set_label">明るさ</div>
+            <label>強度 <input type="range" id="blight" value=1 min=0 max=3 step=0.1></label>
+            <div class="set_label" id="lag_label">音ズレ: 0s</div>
+            <label>− <input type="range" id="lag" value=0 min=-5 max=5 step=0.01> ＋</label>
+            <div class="set_label">フレームレート</div>
+            <label><div id="fps_label" style="float:left">60fps</div><input type="range" id="fps" value=30 min=12 max=60 style="float:left"></label>
+        </div>
+        <div id="mmd"></div>
+        <script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
+        <script src="../js/three.min.js"></script>
+        <script src="../js/charsetencoder.min.js"></script>
+        <script src="../js/ammo.js"></script>
+        <script src="../js/TGALoader.js"></script>
+        <script src="../js/MMDLoader.js"></script>
+        <script src="../js/CCDIKSolver.js"></script>
+        <script src="../js/MMDPhysics.js"></script>
+        <script src="../js/Detector.js"></script>
+        <script src="../js/stats.min.js"></script>
+        <script src="../js/OrbitControls.js"></script>
+        <script type="text/javascript" src="../js/mmd.js"></script>
+    </body>
+</html>

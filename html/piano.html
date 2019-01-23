@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>PIANO</title>
+        <meta charset="utf-8">
+        <link href="../css/piano.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="piano_bg"></div>
+        <div id="piano_cover"></div>
+        <div id="piano">
+          <div id="p_notes">
+              <div class="bg_line" id="bg_F1"></div>
+              <div class="bg_line" id="bg_Gb1"></div>
+              <div class="bg_line" id="bg_G1"></div>
+              <div class="bg_line" id="bg_Ab1"></div>
+              <div class="bg_line" id="bg_A1"></div>
+              <div class="bg_line" id="bg_Bb1"></div>
+              <div class="bg_line" id="bg_B1"></div>
+
+              <div class="bg_line" id="bg_C2"></div>
+              <div class="bg_line" id="bg_Db2"></div>
+              <div class="bg_line" id="bg_D2"></div>
+              <div class="bg_line" id="bg_Eb2"></div>
+              <div class="bg_line" id="bg_E2"></div>
+              <div class="bg_line" id="bg_F2"></div>
+              <div class="bg_line" id="bg_Gb2"></div>
+              <div class="bg_line" id="bg_G2"></div>
+              <div class="bg_line" id="bg_Ab2"></div>
+              <div class="bg_line" id="bg_A2"></div>
+              <div class="bg_line" id="bg_Bb2"></div>
+              <div class="bg_line" id="bg_B2"></div>
+
+              <div class="bg_line" id="bg_C3"></div>
+              <div class="bg_line" id="bg_Db3"></div>
+              <div class="bg_line" id="bg_D3"></div>
+              <div class="bg_line" id="bg_Eb3"></div>
+              <div class="bg_line" id="bg_E3"></div>
+
+              <div class="note_line" id="n_F1"></div>
+              <div class="note_line" id="n_Gb1"></div>
+              <div class="note_line" id="n_G1"></div>
+              <div class="note_line" id="n_Ab1"></div>
+              <div class="note_line" id="n_A1"></div>
+              <div class="note_line" id="n_Bb1"></div>
+              <div class="note_line" id="n_B1"></div>
+
+              <div class="note_line" id="n_C2"></div>
+              <div class="note_line" id="n_Db2"></div>
+              <div class="note_line" id="n_D2"></div>
+              <div class="note_line" id="n_Eb2"></div>
+              <div class="note_line" id="n_E2"></div>
+              <div class="note_line" id="n_F2"></div>
+              <div class="note_line" id="n_Gb2"></div>
+              <div class="note_line" id="n_G2"></div>
+              <div class="note_line" id="n_Ab2"></div>
+              <div class="note_line" id="n_A2"></div>
+              <div class="note_line" id="n_Bb2"></div>
+              <div class="note_line" id="n_B2"></div>
+
+              <div class="note_line" id="n_C3"></div>
+              <div class="note_line" id="n_Db3"></div>
+              <div class="note_line" id="n_D3"></div>
+              <div class="note_line" id="n_Eb3"></div>
+              <div class="note_line" id="n_E3"></div>
+
+            </div>
+            <div id="p_keys">
+
+                <div class="wkey" id="F1"><div></div></div>
+                <div class="wkey" id="G1"><div></div></div>
+                <div class="wkey" id="A1"><div></div></div>
+                <div class="wkey" id="B1"><div></div></div>
+
+                <div class="wkey" id="C2"><div>A</div></div>
+                <div class="wkey" id="D2"><div>S</div></div>
+                <div class="wkey" id="E2"><div>D</div></div>
+                <div class="wkey" id="F2"><div>F</div></div>
+                <div class="wkey" id="G2"><div>G</div></div>
+                <div class="wkey" id="A2"><div>H</div></div>
+                <div class="wkey" id="B2"><div>J</div></div>
+
+                <div class="wkey" id="C3"><div></div></div>
+                <div class="wkey" id="D3"><div></div></div>
+                <div class="wkey" id="E3"><div></div></div>
+
+                <div class="bkey" id="Gb1"><div></div></div>
+                <div class="bkey" id="Ab1"><div></div></div>
+                <div class="bkey" id="Bb1"><div></div></div>
+
+                <div class="bkey" id="Db2"><div>W</div></div>
+                <div class="bkey" id="Eb2"><div>E</div></div>
+                <div class="bkey" id="Gb2"><div>T</div></div>
+                <div class="bkey" id="Ab2"><div>Y</div></div>
+                <div class="bkey" id="Bb2"><div>U</div></div>
+
+                <div class="bkey" id="Db3"><div></div></div>
+                <div class="bkey" id="Eb3"><div></div></div>
+            </div>
+            <div id="p_panel">
+                <div id="title">
+                    <div style="font-size:35px; color:white; position:absolute; left:5px;">MMD</div>
+                    <div style="font-size:18px; color:white; position:absolute; left:93px; top:16px;">Performer(β)</div>
+                </div>
+                <div id="connection">
+                    <div class="topbar">Connection</div>
+                    <select id="hard" name="hard" style="margin-left:10px;">
+                        <option value="pc">PC KEYBOARD</option>
+                    </select>
+                </div>
+                <div id="sound_property">
+                    <div class="topbar">Sound Property</div>
+                    <div id="sp_content">
+                        <div id="general">
+                            <div id="octave" style="position:relative;">
+                                <div class="label" style="position:relative;margin-bottom:5px;">Octave</div>
+                                <div id="oc_down" class="button" style="position:absolute">-</div>
+                                <input type="text" id="r_octave" value=0 readonly="readonly" style="position:absolute; left:50px;">
+                                <div id="oc_up" class="button" style="position:relative; left:115px;">+</div>
+                            </div>
+                        </div>
+                        <div id="tone">
+                            <div class="label">Tone</div>
+                            <select id="tone_type" name="tone_type">
+                                <option value="acoustic_grand_piano">Grand Piano</option>
+                                <option value="acoustic_guitar_nylon">Acoustic Guitar</option>
+                                <option value="clarinet">Clarinet</option>
+                                <option value="electric_bass_pick">Electric Bass</option>
+                                <option value="english_horn">English Horn</option>
+                                <option value="flute">Flute</option>
+                                <option value="overdriven_guitar">Overdriven Guitar</option>
+                                <option value="shamisen">Shamisen</option>
+                                <option value="string_ensemble_1">String Ensemble 1</option>
+                                <option value="synth_bass_2">Synth Bass</option>
+                                <option value="violin">Violin</option>
+                            </select>
+                            <div id="master">
+                                <div class="label">Volume</div>
+                                <input type="range" id="r_volume" min=0 max=127 step=1 value=64>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="assistance">
+                    <div class="topbar">Assistance</div>
+                    <div id="as_content">
+                        <div id="finger">
+                            <div class="fin" id="f_1">
+                                <div class="fin_label">1 Finger</div>
+                                <div class="fin_light"></div>
+                                <div class="fin_button"></div>
+                            </div>
+                            <div class="fin" id="f_2">
+                                <div class="fin_label">2 Fingers</div>
+                                <div class="fin_light"></div>
+                                <div class="fin_button"></div>
+                            </div>
+                            <div class="fin" id="f_3">
+                                <div class="fin_label">3 Fingers</div>
+                                <div class="fin_light"></div>
+                                <div class="fin_button"></div>
+                            </div>
+                            <div class="fin" id="f_4">
+                                <div class="fin_label">4 Fingers</div>
+                                <div class="fin_light"></div>
+                                <div class="fin_button"></div>
+                            </div>
+                        </div>
+                        <div id="chord">
+                            <div class="label">Next Chord</div>
+                            <div id="next_chord_name">-</div>
+                            <div class="label">Chord</div>
+                            <div id="chord_name">-</div>
+                        </div>
+                        <!--div id="speed">
+                            <div class="label">SPEED</div>
+                            <input type="range" id="r_speed" min=0.1 max=1 step=0.1>
+                        </div-->
+                        <!--div id="vowel">
+                            <div class="vow" id="v_auto">
+                                <div class="vow_label">LipSync:Auto</div>
+                                <div class="vow_light sel"></div>
+                                <div class="vow_button"></div>
+                            </div>
+                            <div class="vow" id="v_man">
+                                <div class="vow_label">LipSync:Man</div>
+                                <div class="vow_light"></div>
+                                <div class="vow_button"></div>
+                            </div>
+                        </div-->
+                    </div>
+                </div>
+
+
+                <div id="control">
+                    <div class="topbar">Control</div>
+                    <div id="c_content">
+                        <div class="c" id="c_play">
+                            <div class="c_label">Play/Pause</div>
+                            <div class="c_button" id="play_pause"></div>
+                        </div>
+                        <!--div class="c" id="c_sustain">
+                            <div class="c_label">Sustain</div>
+                            <div class="c_button">SPACE KEY</div>
+                        </div-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.a3d.min.js"></script>
+        <script src="../js/Base64.js" type="text/javascript"></script>
+        <script src="../js/Base64binary.js" type="text/javascript"></script>
+        <script type="text/javascript" src="../js/MIDI.js"></script>
+        <script src="soundfont/acoustic_grand_piano-ogg.js" type="text/javascript"></script>
+        <script src="soundfont/acoustic_guitar_nylon-ogg.js" type="text/javascript"></script>
+        <script src="soundfont/clarinet-ogg.js" type="text/javascript"></script>
+        <script src="soundfont/electric_bass_pick-ogg.js" type="text/javascript"></script>
+        <script src="soundfont/english_horn-ogg.js" type="text/javascript"></script>
+        <script src="soundfont/flute-ogg.js" type="text/javascript"></script>
+        <script src="soundfont/overdriven_guitar-ogg.js" type="text/javascript"></script>
+        <script src="soundfont/shamisen-ogg.js" type="text/javascript"></script>
+        <script src="soundfont/string_ensemble_1-ogg.js" type="text/javascript"></script>
+        <script src="soundfont/synth_bass_2-ogg.js" type="text/javascript"></script>
+        <script src="soundfont/violin-ogg.js" type="text/javascript"></script>
+        <script type="text/javascript" src="../js/piano.js"></script>
+    </body>
+</html>
+
+
+
+
+
