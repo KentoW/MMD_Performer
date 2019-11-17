@@ -1,10 +1,3 @@
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-74903580-3', 'auto');
-ga('send', 'pageview');
 
 
 if (window.localStorage.getItem("mmd_performer") == null){
@@ -19,9 +12,10 @@ if (window.localStorage.getItem("mmd_performer") == null){
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     if (changeInfo.status === 'complete') {
         chrome.tabs.sendMessage(tabId, {type: 'getDoc'}, function (doc) {
-            //console.log(doc);
+            console.log(doc);
         });
     }
+    return true;
 });
 
 
@@ -56,6 +50,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
     else if ((msg.from === 'popup') && (msg.subject === 'extension_on')) {
         chrome.browserAction.setBadgeText({ text: "ON" });
     }
+    return true;
 });
 
 

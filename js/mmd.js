@@ -935,6 +935,8 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse){
         mesh.mixer.clipAction( name ).paused = true;
         mesh.mixer.clipAction( name + 'Morph').paused = true;
     }
+
+    return true;
 });
 
 

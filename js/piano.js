@@ -542,6 +542,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse){
     .css("background-size", "cover");
     //request_play();
   }
+  return true;
 });
 
 var bairitu = 0.1;
